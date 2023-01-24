@@ -1,7 +1,7 @@
 function meuEscopo(){
     const form = document.querySelector('.form');
     const resultado = document.querySelector('.resultado')
-
+    form.addEventListener('submit', recebeEventoForm)
     const pessoas = []
 
     function recebeEventoForm(evento){
@@ -11,13 +11,17 @@ function meuEscopo(){
         const altura= form.querySelector('.altura')
 
         evento.preventDefault();
+}
+    pessoas.push({
+        nome: nome.value,
+        sobrenome: sobrenome.value,
+        peso: peso.value,
+        altura: altura.value
+    })
     
-    function listaCompleta(nome, sobrenome, peso, altura){
-        lista1 = listaCompleta
-    }
-    }
-
-    form.addEventListener('submit', recebeEventoForm)
-
+    console.log(pessoas)
+    
+    resultado.innerHTML += `<p>${nome.value} ${sobrenome.value}`+ `${peso.value} ${altura.value}</P>`
+    
 }
 meuEscopo();
