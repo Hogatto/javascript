@@ -1,50 +1,41 @@
-@charset "UTF-8";
-
 *{
-    margin: 0px;
-    padding: 0px;
+    box-sizing: border-box;
+    outline: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-    background-color: rgb(8, 134, 128);
+    margin: 0;
+    padding: 0;
+    background-color:rgb(135, 206, 235) ;
+    font-size: 1.3em;
+    line-height:1.5em ;
 }
 
 .container{
-    padding: 10px;
-    margin: auto;
-    height:600px ;
-    width: 500px;
+    max-width: 600px;
+    margin: 50px auto;
     background-color: white;
-    font-size: 1.2em;
-    line-height: 1.3em;
-    border-radius: 7px;
+    padding: 20px;
 }
 
-.container p, .container h1{
-    padding-bottom: 10px;
-}
-
-form label, form input{
+form input, form label, form button{
     display: block;
-    height: 30px;
-    width: 485px;
+    width: 100%;
     margin-bottom: 10px;
 }
-form input:focus{
-    outline: rgb(8, 134, 128 );
-}
 
-.botao{
-    display: block;
+form input{
+    font-size: 24px;
     height: 30px;
-    width: 490px;
-    border: none;
-    background-color: rgb(8, 134, 128);
-    cursor: pointer;
+    padding: 0px 20px;
 }
 
-.botao:hover{
-    background-color: rgb(7, 102, 97);
+form input:focus{
+    outline: 1px solid rgb(135, 206, 235)
+}
+
+form button{
+    border: none;
     color: white;
 }
