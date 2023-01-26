@@ -39,3 +39,7 @@ form button{
     border: none;
     color: white;
 }
+
+.paragrafo-resultado{
+    background-color: red;
+}
