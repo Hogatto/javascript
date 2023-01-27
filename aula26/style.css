@@ -40,6 +40,11 @@ form button{
     color: white;
 }
 
-.paragrafo-resultado{
-    background-color: red;
+.paragrafo-resultado, .bad{
+    background-color:rgb(109, 255, 182);
+    padding: 10px 20px;
+}
+
+.bad{
+    background-color: rgb(250, 90, 90);
 }
