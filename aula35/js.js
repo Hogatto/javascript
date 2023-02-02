@@ -1,10 +1,10 @@
-const paragrafos = document.querySelector('.paragrafos')
-const ps = paragrafos.querySelectorAll('p')
+function random(min, max){
+    const r = Math.random() * (max - min) +min
+    return Math.floor(r)
+}
 
-const estilosBody = getComputedStyle(document.body)
-const backgroundColorBody = estilosBodbackgroundColory.
-console.log(backgroundColorBody)
+let rand = random(1, 50)
 
-for (let p of ps){
-    p.style.ackgrobundColor = backgroundColorBody
+while(rand != 10){
+    rand = rand(1, 50)
 }
