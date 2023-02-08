@@ -1,10 +1,11 @@
-function random(min, max){
-    const r = Math.random() * (max - min) +min
-    return Math.floor(r)
+function fizzBuzz(n) {
+    if (typeof numero !== 'number') return n
+    if (n % 3 === 0 & n % 5 === 0) return 'FizzBuzz'
+    if (n % 3 === 0) return 'Fizz'
+    if (n % 5 === 0) return 'Buzz'
+    return n
 }
 
-let rand = random(1, 50)
-
-while(rand != 10){
-    rand = rand(1, 50)
+for (let i = 0; i <= 100; i += 1){
+    console.log(fizzBuzz(i))
 }
