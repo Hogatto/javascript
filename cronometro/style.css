@@ -28,3 +28,7 @@ p{
     display: contents;
     margin: auto;
 }
+
+.pausado{
+    color: red;
+}
