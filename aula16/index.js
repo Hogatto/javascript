@@ -1,2 +1,11 @@
-const alunos = ['Vitor', 'Vanessa', 'Isadora']
-console.log(alunos.slice( ))
+const souUmDado = function () {
+    console.log("iae")
+}
+
+function executaFuncao(funcao){
+    console.log('vou executar sua funcao')
+    funcao()
+}
+
+executaFuncao(souUmDado)
+
