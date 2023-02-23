@@ -1,6 +1,12 @@
-function criaMultiplicador (multiplicador) {
-    function multiplicacao(n){
-        return n * multiplicador
+function criaPessoa(nome, sobrenome) {
+    return {
+        nome,
+        sobrenome,
+        fala: function(assunto) {
+            return `${nome} está ${assunto}`
+        }
     }
-    return multiplicacao
 }
+
+const p1 = criaPessoa('luiz', 'Otávio')
+console.log(p1.fala('falando sobre js'))
