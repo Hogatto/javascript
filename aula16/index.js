@@ -1,11 +1,4 @@
-const souUmDado = function () {
-    console.log("iae")
+function funcao () {
+    console.log("ola")
 }
-
-function executaFuncao(funcao){
-    console.log('vou executar sua funcao')
-    funcao()
-}
-
-executaFuncao(souUmDado)
-
+funcao()
