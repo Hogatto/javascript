@@ -2,9 +2,15 @@ function Calculadora() {
     this.display = document.querySelector('.display')
     
     this.inicia = () => { 
-        this.capturaCliques()        
+        this.capturaCliques()       
+        this.capturaEnter()
     }
-
+    this.capturaEnter = () => {
+        document.addEventListener('keypress', e => {
+            if (KeyboardEvent.keyCode !== 13) return
+            this.resultado()
+        })
+    }
     this.capturaCliques = () => {
         document.addEventListener('click', event => {
             const el = event.target
@@ -34,7 +40,10 @@ function Calculadora() {
 
     this.del = () => this.display.value = this.display.value.slice(0, -1)
     this.clear = () => this.display.value = '';
-    this.addNumDisplay = el => this.display.value += el.innerText
+    this.addNumDisplay = el => {
+        this.display.value += el.innerText
+        this.display.focus()
+    }
 }
 
 const calculadora = new Calculadora()
