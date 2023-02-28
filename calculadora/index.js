@@ -1,29 +1,31 @@
-function criaCalculadora () {
-    return {
-        display: document.querySelector('.display'),
-        btnClear: document.querySelector('.btn-clear'),
+function Calculadora() {
+    this.display = document.querySelector('.display')
+    
+    this.capturaCliques = () => {
+        document.addEventListener('click', event => {
+            const el = event.target
+            if (el.classList.contains('btn-num')) this.addNumDisplay(el)
+            if (el.classList.contains('btn-clear')) this.clear()
+            if (el.classList.contains('btn-del')) this.del()
+            if (el.classList.contains('btn-eq')) this.resultado()
+        });
+    }
 
-        clearDisplay(){
-            this.display.value = ''
-        }
-        inicia: function() {
-         this.cliqueBotoes()
-        },
+    this.resultado = () => {
+        try {
         
-        cliqueBotoes(){
-            document.addEventListener('click', function(e){
-                const el = e.target
-
-                if(el.classList.contains('btn-num')){
-                    this.btnParaDisplay(el.innerText)
-                }
-            }.bind(this))
-        },
-        btnParaDisplay(valor){
-            this.display.value += valor
+        }catch(e){
+            alert('conta invalida')
+            return
         }
     }
+
+    this.del = () => this.display.value = this.display.value.slice(0, -1)
+    this.clear = () => this.display.value = '';
+    this.addNumDisplay = el => this.display.value += el.innerText
+    this.inicia = () => this.capturaCliques()
+
 }
 
-const calculadora = criaCalculadora()
+const calculadora = new Calculadora()
 calculadora.inicia()
