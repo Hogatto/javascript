@@ -1,6 +1,10 @@
 function Calculadora() {
     this.display = document.querySelector('.display')
     
+    this.inicia = () => { 
+        this.capturaCliques()        
+    }
+
     this.capturaCliques = () => {
         document.addEventListener('click', event => {
             const el = event.target
@@ -13,7 +17,15 @@ function Calculadora() {
 
     this.resultado = () => {
         try {
-        
+        const conta = eval(this.display.value)
+
+        if(!conta) {
+            alert('conta invalida')
+            return
+        }
+
+        this.display.value = conta
+            
         }catch(e){
             alert('conta invalida')
             return
@@ -23,8 +35,6 @@ function Calculadora() {
     this.del = () => this.display.value = this.display.value.slice(0, -1)
     this.clear = () => this.display.value = '';
     this.addNumDisplay = el => this.display.value += el.innerText
-    this.inicia = () => this.capturaCliques()
-
 }
 
 const calculadora = new Calculadora()
