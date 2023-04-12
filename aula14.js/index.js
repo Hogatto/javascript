@@ -16,12 +16,3 @@ const pessoas = [
     {nome: 'Wallace', idade: 47}
 ]
 
-const listaPessoas = pessoas.map(nome => nome.nome)
-
-const idade = pessoas.map(obj => ({ idade: obj.idade}))
-
-const comIds = pessoas.map(function(obj, indice) {
-    obj.Id = indice
-    return obj
-} )
-console.log(comIds)
